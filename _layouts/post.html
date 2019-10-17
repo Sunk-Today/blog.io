@@ -94,6 +94,17 @@ layout: default
                     <div class="ds-thread" data-thread-key="{{page.id}}" data-title="{{page.title}}" data-url="{{site.url}}{{page.url}}"></div>
                 </div>
                 <!-- 多说评论框 end -->
+
+                <!-- 浏览次数 start -->
+                {% if site.leancloud.enable %}
+                <div>
+                    <span id="{{ page.url }}" class="leancloud_visitors" data-flag-title="{{ page.title }}">
+                        Visited:
+                        <a href="#"><span class="leancloud-visitors-count"></span>次</a>
+                    </span>
+                </div>
+                {% endif %}
+                <!-- 浏览次数 end -->
             </div>
         </div>
     </div>
